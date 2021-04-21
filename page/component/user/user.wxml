@@ -1,8 +1,15 @@
 <view class="main">
     <view class="header">
-        <image src="{{thumb}}" class="thumb"></image>
-        <text class="nickname">{{nickname}}</text>
-        <text class="about">关于我们</text>
+        <view wx:if="{{isLogin}}">
+            <image src="{{thumb}}" class="thumb"></image>
+            <text class="nickname">{{nickname}}</text>
+        </view>
+        <view wx:if="{{!isLogin}}">
+            <button class="login" bindtap="login">登录</button>
+        </view>
+        
+        
+        <text class="about">关于我们{{nickname}}</text>
     </view>
     <view class="address-box">
         <view class="address-manage">

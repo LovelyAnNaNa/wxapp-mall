@@ -22,6 +22,10 @@
     float: right;
 }
 
+.login{
+    float: left;
+}
+
 .address-box{
     border-bottom: 20rpx solid #ededed;
     color: #999;
